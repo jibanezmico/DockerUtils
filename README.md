@@ -28,7 +28,7 @@ Esto creará una imagen llamada `ssh-ftp-server` a partir del `Dockerfile`.
 ### 3. Ejecutar el contenedor
 Arranca un contenedor basado en la imagen recién creada, mapeando los puertos necesarios:
 ```bash
-docker run -d -p 22:22 -p 21:21 --name ssh-ftp-container ssh-ftp-server
+docker run -d -p 22:22 -p 21:21 -p 10000-10100:10000-10100  --name ssh-ftp-container ssh-ftp-server
 ```
 
 ### 4. Verificar que el contenedor está en ejecución
